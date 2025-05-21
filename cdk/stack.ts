@@ -1,4 +1,5 @@
 import * as cdk from 'aws-cdk-lib';
+import { InvestmentCalculatorQueue } from './investment-calculator-queue';
 export class DeploymentStack extends cdk.Stack {
     /**
      * @param {cdk.Construct} scope
@@ -7,6 +8,6 @@ export class DeploymentStack extends cdk.Stack {
      */
     constructor(scope: any, id: string, props?: any) {
         super(scope, id, props);
-
+        new InvestmentCalculatorQueue(this, 'InvestmentCalculatorQueue', props);
     }
 }
