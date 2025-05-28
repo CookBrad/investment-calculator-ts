@@ -4,7 +4,7 @@ import { DeploymentStack } from '../cdk/stack';
 const app = new cdk.App();
 
 const createStack = () => {
-    new DeploymentStack(app, 'PipelineStack', {});
+    new DeploymentStack(app, 'InvestmentCalculatorTs', {});
 };
 
 createStack();
